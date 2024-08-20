@@ -62,7 +62,7 @@ model: str = st.selectbox("Model", options=MODEL_LIST)  # type: ignore
 try:
     file = read_file(uploaded_file)
 except Exception as e:
-    display_file_read_error(e, file_name=uploaded_file.name)
+    display_file_read_error(e, file_name=uploaded_file)
 
 chunked_file = chunk_file(file, chunk_size=300, chunk_overlap=0)
 
