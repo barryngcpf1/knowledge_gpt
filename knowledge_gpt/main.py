@@ -44,12 +44,12 @@ if not openai_api_key:
     )
 
 
-#uploaded_file = st.file_uploader(
-#    "Upload a pdf, docx, or txt file",
-#    type=["pdf", "docx", "txt"],
-#    help="Scanned documents are not supported yet!",
-#)
-#uploaded_file = st.file_uploader("https://www.thedigitalacademy.tech.gov.sg/docs/default-source/digital-academy-documents/da-upskilling-guide-2022---for-wog.pdf")
+uploaded_file = st.file_uploader(
+    "Upload a pdf, docx, or txt file",
+    type=["pdf", "docx", "txt"],
+    help="Scanned documents are not supported yet!",
+)
+uploaded_file = st.file_uploader("https://www.thedigitalacademy.tech.gov.sg/docs/default-source/digital-academy-documents/da-upskilling-guide-2022---for-wog.pdf")
 model: str = st.selectbox("Model", options=MODEL_LIST)  # type: ignore
 
 with st.expander("Advanced Options"):
